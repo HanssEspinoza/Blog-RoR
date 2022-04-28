@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describre "Health endpoint", type: :request do
+RSpec.describe "Health endpoint", type: :request do
   describe "GET /health" do
     before { get '/health' }
 
@@ -11,7 +11,7 @@ RSpec.describre "Health endpoint", type: :request do
     end
 
     it "should return status code 200" do
-      expect(response).to have_thhp_status(200)
+      expect(response).to have_http_status(200)
     end
   end
 end
